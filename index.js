@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import TaskRouter from './aulas-api-2025-1/router/task-router.js';
+import TaskRouter from './api/router/task-router.js';
 
 const app = express();
 app.use(express.json());
@@ -28,7 +28,7 @@ app.use(async (req,res,next)=>{
 app.use('/tasks', TaskRouter);
 
 //TODO: Refatorar
-import User from './aulas-api-2025-1/model/user.js';
+import User from './api/model/user.js';
 app.post('/users', async (req,res)=>{
     try{
         const user = await User.create(req.body);
