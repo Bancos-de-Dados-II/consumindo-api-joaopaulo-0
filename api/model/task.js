@@ -35,13 +35,13 @@ const Task = sequelize.define(
     },
   );
 
-User.hasMany(Task,{
+/*User.hasMany(Task,{
   foreignKey: 'userId',
   allowNull: false,
   onDelete: 'CASCADE',
   onUpdate: 'CASCADE'
 });
 
-Task.sync({force:true});
+Task.sync({force:true});*/
 
 export default Task;
